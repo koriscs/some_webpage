@@ -1,0 +1,265 @@
+
+*{
+    margin: 0;
+    padding: 0;
+   /* border: 2px solid hotpink;*/
+
+}
+
+img, picture {
+    max-width: 100%;
+}
+
+
+
+/*-----Header-----*/
+
+
+.background {
+    background: url('../images/wave4.svg') no-repeat;
+    background-size: cover;
+    z-index: 6;
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    margin-top: -10vh;
+
+}
+
+.menu {
+    display: none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    z-index: 5;
+    background-color: rgb(255,127,80);
+}
+.name {
+    max-height: 100%;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+.name h1 {
+    font-size: 400;
+    font-family: 'Space Mono', monospace;
+    text-shadow: 3px 3px 5px rgba(126, 102, 52, 0.411);
+}
+.logo {
+    text-align: center;
+}
+.logo img {
+    height: 7rem;
+}
+header > * {
+    flex-basis: 33%;
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    height: 100%;
+    max-width: 100%;
+}
+.navbar ul {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar li a{
+    text-decoration: 0;
+    color: black;
+    padding: 0.25rem;
+    font-size: 400;
+    font-family: 'Space Mono', monospace;
+    border-radius: 15px;
+    padding: 5px 15px;
+    background-color: rgb(207, 91, 49);
+    box-shadow: 3px 3px chocolate;
+
+}
+.navbar ul:last-child {
+margin-right: 1vw;
+}
+
+.navbar li a:hover {
+    text-shadow: 2px 2px rgb(51, 46, 46);
+}
+.navbar li a:active {
+    box-shadow: none;
+}
+
+
+
+/*-----Main-----*/
+
+
+
+
+main {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+}
+main::before {
+    content: "";
+    position: absolute;
+    background-color: beige;
+    opacity: 0.5;
+    top: 7rem;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+}
+main > * {
+    z-index: 2;
+}
+main .title {
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(126, 102, 52, 0.411);
+    opacity: 1;
+}
+.title h1,p {
+    z-index: 3;
+    color: black;
+}
+
+
+
+/*----Content-----*/
+
+
+#content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.row {
+    height: 33vh;
+    width: 100%;
+    background: rgba(126, 102, 52, 0.411);
+    background: linear-gradient(145deg ,#020024 0%, #c89628 35%, #f9f5ef 100%);
+    display: flex;
+}
+
+.container .second {
+    background: rgba(126, 102, 52, 0.411);
+    background: linear-gradient(325deg ,#020024 0%, #c89628 35%, #f9f5ef 100%);
+}
+.container .box {
+    display: flex;
+    align-self: center;
+    margin-bottom: 1em;
+}
+.row img {
+    height: 25vh;
+    aspect-ratio: 1 / 1;
+    margin: 0.5rem;
+}
+.row .firstb {
+    flex-basis: 70%;
+}
+.row .secondb {
+    flex-basis: 30%;
+}
+.second .firstb {
+    justify-content: center;
+}
+.short {
+    justify-content: center;
+    flex-shrink: 1;
+}
+.long {
+    margin-left: 4em;
+    flex-shrink: 2;
+}
+.box h3 {
+    color: aliceblue;
+    font-family: monospace;
+    font-size: 3em;
+    text-align: center;
+    margin: 1em;
+    letter-spacing: 5px;
+}
+.box p {
+    color: aliceblue;
+    font-size: 1.5em;
+    width: 7em;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+/*----Footer-----*/
+
+footer {
+    background: #c89628 url('../images/wave.svg') no-repeat ;
+    background-size: cover;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+}
+ footer p {
+     padding-top: 5vh;
+ }
+
+
+ /*----Media Quary-----*/
+
+
+@media only screen and (max-width:770px) {
+    .navbar{
+        display: none;
+    }
+    .logo {
+        display: none;
+    }
+    .menu {
+        display: block;
+        flex-basis: 15%;
+        margin-top: 1rem;
+    }
+    .menu img {
+        height: 70px;
+        width: 70px;
+    }
+    header{
+        height: 7rem;
+        justify-content: space-between;
+    }
+    .short , .long {
+        min-width: 200px;
+    }
+    .row {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+    }
+    .long {
+        margin-left: 0;
+    }
+}
+
+
+
+
+
+
